@@ -1,0 +1,10 @@
+
+java {
+	sourceCompatibility = '21'
+}
+
+
+dependencies {
+	implementation 'com.fasterxml.jackson.core:jackson-annotations:2.15.3'
+    testImplementation project(path: ':client')
+}

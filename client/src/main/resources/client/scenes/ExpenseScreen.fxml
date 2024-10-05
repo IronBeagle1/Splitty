@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="692.0" prefWidth="500.0" stylesheets="@../../stylesheets/main.css, @/stylesheets/main.css" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="client.scenes.ExpenseScreenCtrl">
+   <children>
+      <Label fx:id="addEditExpense" layoutX="47.0" layoutY="44.0" styleClass="h1" text="Add/Edit Expense">
+         <font>
+            <Font size="24.0" />
+         </font></Label>
+      <Label fx:id="paidBy" layoutX="46.0" layoutY="118.0" styleClass="h2" text="Paid by">
+         <font>
+            <Font size="18.0" />
+         </font></Label>
+      <ComboBox fx:id="choosePayer" editable="true" layoutX="168.0" layoutY="119.0" prefHeight="26.0" prefWidth="264.0" promptText="Paid by" styleClass="small-text" />
+      <Label fx:id="purpose" layoutX="44.0" layoutY="183.0" styleClass="h2" text="Purpose">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <TextField fx:id="expensePurpose" layoutX="169.0" layoutY="184.0" prefHeight="26.0" prefWidth="264.0" promptText="Purpose" styleClass="small-text" />
+      <Label fx:id="amount" layoutX="44.0" layoutY="245.0" styleClass="h2" text="Amount">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <TextField fx:id="sum" layoutX="169.0" layoutY="246.0" prefHeight="26.0" prefWidth="171.0" promptText="Amount" styleClass="small-text" />
+      <ComboBox fx:id="currency" editable="true" layoutX="340.0" layoutY="246.0" prefHeight="26.0" prefWidth="90.0" styleClass="small-text" />
+      <Label fx:id="date" layoutX="44.0" layoutY="307.0" styleClass="h2" text="Date">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <DatePicker fx:id="datePicker" layoutX="169.0" layoutY="308.0" prefHeight="26.0" prefWidth="264.0" promptText="dd/mm/yyyy">
+         <styleClass>
+            <String fx:value="small-text" />
+            <String fx:value="sortButton" />
+         </styleClass></DatePicker>
+      <Label fx:id="splitMethod" layoutX="44.0" layoutY="363.0" styleClass="h2" text="Split method">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <CheckBox fx:id="splitBetweenAllCheckBox" layoutX="62.0" layoutY="415.0" mnemonicParsing="false" prefHeight="18.0" prefWidth="242.0" text="Split between all participants" />
+      <Label fx:id="expenseType" layoutX="347.0" layoutY="363.0" styleClass="h2" text="Expense Type">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Button fx:id="cancel" layoutX="256.0" layoutY="617.0" mnemonicParsing="false" onAction="#switchToEventScreen" prefHeight="31.0" prefWidth="90.0" text="Cancel">
+         <styleClass>
+            <String fx:value="negativeButton" />
+            <String fx:value="small-text" />
+         </styleClass></Button>
+      <Button fx:id="confirm" layoutX="345.0" layoutY="617.0" mnemonicParsing="false" onAction="#addExpenseToEvenScreen" prefHeight="31.0" prefWidth="90.0" text="Confirm">
+         <styleClass>
+            <String fx:value="positiveButton" />
+            <String fx:value="small-text" />
+         </styleClass></Button>
+      <Label fx:id="errorParticipants" layoutX="169.0" layoutY="158.0" prefHeight="18.0" prefWidth="250.0">
+         <styleClass>
+            <String fx:value="errorText" />
+            <String fx:value="small-text" />
+         </styleClass></Label>
+      <Label fx:id="errorNoPurpose" layoutX="170.0" layoutY="223.0" prefHeight="18.0" prefWidth="250.0">
+         <styleClass>
+            <String fx:value="errorText" />
+            <String fx:value="small-text" />
+         </styleClass></Label>
+      <Label fx:id="errorAmount" layoutX="170.0" layoutY="285.0" prefHeight="18.0" prefWidth="250.0">
+         <styleClass>
+            <String fx:value="errorText" />
+            <String fx:value="small-text" />
+         </styleClass></Label>
+      <Label fx:id="errorDate" layoutX="170.0" layoutY="347.0" prefHeight="18.0" prefWidth="250.0">
+         <styleClass>
+            <String fx:value="errorText" />
+            <String fx:value="small-text" />
+         </styleClass></Label>
+      <Label fx:id="errorSplitMethod" layoutX="43.0" layoutY="389.0" prefHeight="18.0" prefWidth="250.0">
+         <styleClass>
+            <String fx:value="errorText" />
+            <String fx:value="small-text" />
+         </styleClass>
+      </Label>
+      <CheckBox fx:id="splitBetweenCustomCheckBox" layoutX="62.0" layoutY="456.0" mnemonicParsing="false" prefHeight="18.0" prefWidth="232.0" text="Split between certain participants" />
+      <VBox fx:id="participantsVBox" layoutX="80.0" layoutY="476.0" prefHeight="100.0" prefWidth="159.0" />
+      <ComboBox fx:id="tagComboBox" layoutX="301.0" layoutY="397.0" prefHeight="25.0" prefWidth="159.0" />
+   </children>
+</AnchorPane>

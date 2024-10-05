@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<AnchorPane  prefHeight="400.0" prefWidth="452.0"
+             stylesheets="@../../stylesheets/main.css, @/stylesheets/main.css" xmlns="http://javafx.com/javafx/17.0.2-ea"
+             xmlns:fx="http://javafx.com/fxml/1" fx:controller="client.scenes.ParticipantScreenCtrl">
+   <Label fx:id="title" layoutX="90.0" layoutY="30.0" styleClass="h1" text="Add/Edit Participant">
+      <font>
+         <Font size="25.0"/>
+      </font>
+   </Label>
+   <Label fx:id="name" layoutX="90.0" layoutY="75.0" styleClass="h2" text="Name"/>
+   <TextField fx:id="nameField" layoutX="209.0" layoutY="75.0" prefWidth="205" promptText="add name"
+              styleClass="small-text"/>
+   <Label fx:id="optional" layoutX="90.0" layoutY="120.0" styleClass="small-text" text="optional"/>
+   <Label fx:id="email" layoutX="90.0" layoutY="140.0" styleClass="h2" text="Email"/>
+   <TextField fx:id="emailField" layoutX="209.0" layoutY="140.0" prefWidth="205" promptText="add email"
+              styleClass="small-text"/>
+   <Label fx:id="bankDetails" layoutX="90.0" layoutY="178.0" styleClass="small-text" text="Bank Details (Optional)"/>
+   <Label fx:id="holder" layoutX="90.0" layoutY="200.0" styleClass="h2" text="Holder"/>
+   <TextField fx:id="holderField" layoutX="209.0" layoutY="200.0" prefWidth="205" promptText="add account holder"
+              styleClass="small-text"/>
+   <Label fx:id="iban" layoutX="90.0" layoutY="250.0" styleClass="h2" text="IBAN"/>
+   <TextField fx:id="ibanField" layoutX="209.0" layoutY="250.0" prefWidth="205" promptText="add IBAN"
+              styleClass="small-text"/>
+   <Label fx:id="bic" layoutX="90.0" layoutY="300.0" styleClass="h2" text="BIC"/>
+   <TextField fx:id="bicField" layoutX="209.0" layoutY="300.0" prefWidth="205" promptText="add BIC"
+              styleClass="small-text"/>
+   <Button fx:id="okButton" layoutX="327.0" layoutY="354.0" mnemonicParsing="false" onAction="#confirmCreateEdit"
+           prefHeight="30.0" prefWidth="87.0" text="OK">
+      <styleClass>
+         <String fx:value="positiveButton"/>
+         <String fx:value="small-text"/>
+      </styleClass>
+   </Button>
+   <Button fx:id="cancelButton" layoutX="209.0" layoutY="354.0" mnemonicParsing="false" onAction="#cancel"
+           prefHeight="30.0" prefWidth="87.0" text="Cancel">
+      <styleClass>
+         <String fx:value="negativeButton"/>
+         <String fx:value="small-text"/>
+      </styleClass>
+   </Button>
+   <Label fx:id="noName" layoutX="209" layoutY="102.0" prefHeight="18.0" prefWidth="200.0">
+      <styleClass>
+         <String fx:value="errorText"/>
+         <String fx:value="small-text"/>
+      </styleClass>
+   </Label>
+   <Label fx:id="noEmail" layoutX="209" layoutY="167.0" prefHeight="18.0" prefWidth="200.0">
+      <styleClass>
+         <String fx:value="errorText"/>
+         <String fx:value="small-text"/>
+      </styleClass>
+   </Label>
+   <Label fx:id="wrongIban" layoutX="209.0" layoutY="278.0" prefHeight="18.0" prefWidth="200.0">
+      <styleClass>
+         <String fx:value="errorText"/>
+         <String fx:value="small-text"/>
+      </styleClass>
+   </Label>
+   <Label fx:id="wrongBic" layoutX="209.0" layoutY="328.0" prefHeight="18.0" prefWidth="200.0">
+      <styleClass>
+         <String fx:value="errorText"/>
+         <String fx:value="small-text"/>
+      </styleClass>
+   </Label>
+</AnchorPane>

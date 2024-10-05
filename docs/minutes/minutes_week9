@@ -1,0 +1,86 @@
+| Key | Value |
+|--------------|---------------------------------|
+| Date: | 09/04/2024 |
+| Time: | 15:45 - 16:30 |
+| Location: | Drebbelweg PC Hall 1 'Backroom' |
+| Chair | Maurice van de Streek |
+| Minute Taker | Glafkos Michaelides |
+| Attendees: | Everyone |
+
+Agenda Items:
+- Opening by chair **(1 min)**
+- Check-in: How is everyone doing? **(1 min)**
+	-All good
+- Announcements by the team **(1 min)**
+No announcements
+- Approval of the agenda & last week's minutes - Does anyone have any additions? **(1 min)**
+	-Everything approved 
+- Announcements by the TA **(3 min)**
+	-Knockout criteria this week
+	-Code freeze moved to Sunday
+	-Self Reflection and buddy check on friday
+	-Presentation will be recorder -> you can ask not to be recorded, but the examination will be rescheduled 
+- Talking Points: (inform/decision-making/discuss)
+1. Sprint review **(6 min)**
+	-Maurice -> Transfer money from A to B, UI screen pops up and 
+	-Iustin -> added tags to events; statistic screen with a pie chart, which shows total amount of expenses for each event (it also has a few basic tags)
+	-Matei -> fixed bugs, added tests, added a third language and flags to the language dropdown switch
+	-Iorgos -> email notification feature has been fully implemented, with consistent testing; this week worked on improving accessibility -> shortcuts; moved folder lang
+	-Glafkos -> participant detailed expense fields and error checking
+    -Kornel -> web sockets to Admin page (3hrs), long polling for event names (1hr; estimated 3hr);this week -> share per person (2hr 20; estimated 3hr); self reflection (8hr)
+2. Present application to TA **(5 min)**
+Modify cancel/back buttons
+color contrast should be good
+3. HCI rubrics **(4 min)**
+	-Giorgos: tool tips -> can be bound in the scene builder
+	-Server stop error messages -> go to start screen, display a message and close it (we don’t know for now)
+    -Color contrast: tags -
+    -Keyboard shortcuts -
+    -Errors: server is down, are there other errors we missed?
+
+4. Pointer file + README **(2 min)**
+	Pointer file -> we need to guide the corrector where the implemented features are, in what files;
+	-We might be able to review the initial TA grade;
+	-Pointer file will be mentioned in the README file
+	-Mention important features which might be implemented differently so that the TA does not miss them
+
+	README -> everyone can write a bit about their controllers; Management overview and email configuration; Splitty server; password; generate language; shortcuts 
+	
+5. Code deadline **(3 min)**
+- How to deal with problematic MRs just before the deadline for knockout-criteria?
+	-To deal with approvals, we may want to implement features as soon as possible
+	-Kornel suggest he may have to many assigned tasks (will try by Thursday, but possible not to finish everything) -> will let us know by Wednesday if everything is fine
+	-Might move deadline to Friday, will decide on Thursday
+- Should we test the entire application aka all requirements when accepting MRs?
+	-New features deadline: Thursday, check for bugs by Sunday
+
+6. What else should we work on? **(10 min)**
+- Missing @Controller?
+	-
+- Relocate backup and lang folder and config file into client module
+	-
+- Are there rubrics we haven't yet satisfied?
+	-
+- Translations: tags, third language, screens?
+	-DELETING tag; maybe add a new screen for tags, where you can edit/delete tags -> have a dropdown with the tags in the statistic screen - Glafkos can work on that
+- Testing?
+	-
+- JavaDoc?
+    -Fix javadoc for tests
+    -Maurice asks if we have to enable the checkstyle -> yes
+    -Everyone fix their javadoc 
+- Feedback round: What went well and what can be improved next time? **(1 min)**
+    -No feedback
+- Planned meeting duration != actual duration? Where/why did you miss-estimate? **(1 min)**
+    -Overestimated sprint review and TA questions; otherwise good
+- Question round: Does anyone have anything to add before the meeting closes? **(5 min)**
+    -Kornel asks if the implementation of @Controller is good. Yes 
+    -Ideally add references from the teamwork lecture in the reflection
+    -Use keywords for the lectures; does not matter where they are
+The following were not discussed:
+    -Is our understanding of "share per person" correct?
+    -Is our use of @Controller for server status check sufficient?
+    -Is our use of long polling sufficient?
+
+- Closure **(1 min)**
+

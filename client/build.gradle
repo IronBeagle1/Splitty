@@ -1,0 +1,57 @@
+plugins {
+    id 'application'
+    id("org.openjfx.javafxplugin") version "0.1.0"
+}
+
+application {
+    mainClass = 'client.Main'
+	tasks.run.workingDir = rootProject.projectDir
+}
+
+javafx {
+    version = "21.0.2"
+    modules = [ 'javafx.controls', 'javafx.fxml']
+}
+
+java {
+	sourceCompatibility = '21'
+}
+
+test{
+	workingDir = rootProject.projectDir
+}
+
+dependencies {
+	implementation project(":commons")
+	
+	implementation group: 'org.glassfish.jersey.core', name: 'jersey-client', version: '3.1.5'
+	implementation group: 'org.glassfish.jersey.inject', name: 'jersey-hk2', version: '3.1.5'
+	implementation group: 'org.glassfish.jersey.media', name: 'jersey-media-json-jackson', version: '3.1.5'
+	
+	implementation group: 'jakarta.activation', name: 'jakarta.activation-api', version: '2.0.1'
+	
+	implementation 'com.google.inject:guice:7.0.0'
+
+	implementation 'org.springframework.boot:spring-boot-starter-websocket:3.2.2'
+
+	implementation 'org.apache.commons:commons-text:1.11.0'
+
+	implementation 'com.fasterxml.jackson.datatype:jackson-datatype-jsr310'
+	implementation 'com.fasterxml.jackson.core:jackson-databind:2.12.3'
+	implementation 'com.fasterxml.jackson.datatype:jackson-datatype-jsr310:LATEST'
+	implementation 'org.springframework.boot:spring-boot-starter-mail:2.7.5'
+
+	testImplementation 'org.mockito:mockito-core:5.11.0'
+	testImplementation group: 'org.mockito', name: 'mockito-junit-jupiter', version: '5.11.0'
+
+	testImplementation group: 'org.testfx', name: 'testfx-core', version: '4.0.18'
+	testImplementation group: 'org.testfx', name: 'testfx-junit5', version: '4.0.18'
+	testImplementation group: 'org.testfx', name: 'openjfx-monocle', version: '21.0.2'
+	testImplementation group: 'org.hamcrest', name: 'hamcrest', version: '2.2'
+
+	implementation 'org.openjfx:javafx-controls:21.0.2'
+	testImplementation 'org.openjfx:javafx-graphics:21.0.2'
+	implementation 'org.openjfx:javafx-fxml:21.0.2'
+	testImplementation 'org.junit.jupiter:junit-jupiter:5.10.2'
+	testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
+}

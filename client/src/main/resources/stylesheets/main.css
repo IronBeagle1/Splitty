@@ -1,0 +1,158 @@
+*{
+    default-positive: #215E7A;
+    default-positive-accent: #153748;
+    default-negative: #A12525;
+    default-negative-accent: #791d1d;
+    default-light: #F5F5F5;
+    -fx-font-scale: 34px;
+}
+
+.button{
+    -fx-border-width: 2px;
+    -fx-border-color: black;
+    -fx-border-radius: 10px;
+    -fx-background-radius: 10px;
+    -fx-padding: 5px;
+}
+.backgroundLight{
+    -fx-background-color: default-light;
+}
+.positiveButton{
+    -fx-background-color: default-positive;
+    -fx-text-fill: default-light;
+}
+.positiveButton:hover{
+    -fx-background-color: default-positive-accent;
+}
+.positiveButton:focused{
+    -fx-background-color: default-positive-accent;
+}
+
+.negativeButton{
+    -fx-background-color: default-negative;
+    -fx-text-fill: default-light;
+}
+.negativeButton:hover{
+    -fx-background-color: default-negative-accent;
+}
+.negativeButton:focused{
+    -fx-background-color: default-negative-accent;
+}
+
+.warningLabel{ -fx-text-fill: #ff7200 }
+
+.button:hover{
+    -fx-cursor: hand;
+}
+.h1{
+    -fx-font-size: 24px;
+    -fx-font-weight: bold;
+}
+
+.h2{
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+}
+
+.small-text{
+    -fx-font-size: 14px;
+}
+
+.large-text{
+    -fx-font-size: 20px;
+}
+
+.large-text-emphasis{
+    -fx-font-size: 20px;
+    -fx-font-weight: bold;
+}
+
+.errorText{
+    -fx-text-fill: default-negative;
+    -fx-font-size: 14px;
+}
+.successText{
+    -fx-text-fill: green;
+    -fx-font-size: 14px;
+}
+.sortButton{
+    -fx-border-radius: 0;
+    -fx-background-radius: 0;
+}
+.disabledButton{
+    -fx-opacity: 0.5;
+    -fx-background-color: grey;
+}
+.disabledButton:hover{
+    -fx-background-color: grey;
+    -fx-cursor: default
+}
+.disabledButton:focused{
+    -fx-background-color: grey;
+    -fx-cursor: default
+}
+.borderVBox{
+    -fx-border-radius: 10px;
+    -fx-border-color: black;
+    -fx-border-width: 2px;
+    -fx-padding: 5px;
+}
+
+.table-view .column-header-background{
+    -fx-background-color: default-positive;
+}
+
+.table-view .column-header {
+    -fx-background-color: transparent;
+}
+
+.table-view .column-header .label{
+    -fx-text-fill: default-light;
+    -fx-font-weight: bold;
+}
+
+.table-view .table-column {
+    -fx-alignment: center;
+}
+
+.table-view .virtual-flow .scroll-bar:vertical,
+.table-view .virtual-flow .scroll-bar:vertical .track,
+.table-view .virtual-flow .scroll-bar:vertical .track-background,
+.table-view .virtual-flow .scroll-bar:horizontal,
+.table-view .virtual-flow .scroll-bar:horizontal .track,
+.table-view .virtual-flow .scroll-bar:horizontal .track-background {
+    -fx-background-color: transparent;
+}
+
+.table-view .virtual-flow .scroll-bar .increment-button,
+.table-view .virtual-flow .scroll-bar .decrement-button {
+    -fx-opacity: 0;
+    -fx-padding: 2;
+}
+
+.table-view .virtual-flow .scroll-bar:vertical .thumb{
+    -fx-background-color: default-positive;
+}
+.table-view .virtual-flow .scroll-bar:horizontal .thumb {
+    -fx-background-color:  default-positive;
+}
+
+.table-view .column-header-background .filler {
+    -fx-background-color: transparent;
+}
+.table-view .corner {
+    -fx-background-color: transparent;
+}
+.chart-pie {
+    -fx-padding: -100;
+    -fx-border-color: derive(-fx-pie-color, -40%);
+    -fx-border-width: 3px;
+}
+
+.fieldsBorderGreen{
+    -fx-border-color: #26c506;
+}
+
+.fieldsBorderRed{
+    -fx-border-color: red;
+}

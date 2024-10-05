@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="729.0" prefWidth="689.0" stylesheets="@../../stylesheets/main.css, @/stylesheets/main.css" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="client.scenes.EventScreenCtrl">
+   <children>
+      <Label fx:id="eventNameLabel" layoutX="160.0" layoutY="30.0" prefHeight="35.0" prefWidth="237.0" styleClass="h1" text="Event" wrapText="true">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Button fx:id="editTitle" layoutX="160.0" layoutY="80.0" mnemonicParsing="false" onAction="#editTitle" prefHeight="34.0" prefWidth="111.0" text="Edit title">
+         <font>
+            <Font size="14.0" />
+         </font>
+         <styleClass>
+            <String fx:value="positiveButton" />
+            <String fx:value="small-text" />
+         </styleClass>
+         <tooltip>
+            <Tooltip text="Ctrl + W" />
+         </tooltip>
+      </Button>
+      <TextField fx:id="invitationCode" layoutX="399.0" layoutY="30.0" prefHeight="51.0" prefWidth="139.0" styleClass="h1" text="Event">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </TextField>
+      <Label fx:id="participantsName" layoutX="164.0" layoutY="124.0" prefHeight="27.0" prefWidth="139.0" styleClass="h2" text="Participants">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="participantsLabel" layoutX="164.0" layoutY="157.0" prefHeight="17.0" prefWidth="157.0" styleClass="small-text" text="Label">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Label>
+      <Button fx:id="editParticipant" layoutX="306.0" layoutY="125.0" mnemonicParsing="false" onAction="#editCurrentParticipants" prefHeight="25.0" prefWidth="29.0" styleClass="positiveButton" />
+      <Button fx:id="addParticipant" layoutX="349.0" layoutY="125.0" mnemonicParsing="false" onAction="#addParticipants" prefHeight="25.0" prefWidth="29.0" styleClass="positiveButton">
+         <tooltip>
+            <Tooltip text="Ctrl + P" />
+         </tooltip></Button>
+      <Label fx:id="expenseLabel" layoutX="160.0" layoutY="189.0" prefHeight="17.0" prefWidth="111.0" styleClass="h2" text="Expenses">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <VBox fx:id="vBoxExpenses" layoutX="160.0" layoutY="220.0" prefHeight="26.0" prefWidth="100.0">
+         <children>
+            <ComboBox fx:id="cBoxParticipantExpenses" editable="true" prefWidth="150.0" styleClass="small-text" />
+         </children>
+      </VBox>
+      <Button fx:id="addExpense" layoutX="335.0" layoutY="174.0" mnemonicParsing="false" onAction="#addExpense" prefHeight="34.0" prefWidth="195.0" text="Add Expense">
+         <styleClass>
+            <String fx:value="positiveButton" />
+            <String fx:value="small-text" />
+         </styleClass>
+         <graphic>
+            <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@/images/addExpense.png" />
+               </image>
+            </ImageView>
+         </graphic>
+         <tooltip>
+            <Tooltip text="Ctrl + Q" />
+         </tooltip></Button>
+      <Button fx:id="addTagButton" layoutX="335.0" layoutY="219.0" mnemonicParsing="false" onAction="#switchToAddTag" prefHeight="34.0" prefWidth="195.0" text="Add Tag">
+         <styleClass>
+            <String fx:value="positiveButton" />
+            <String fx:value="small-text" />
+         </styleClass>
+         <graphic>
+            <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@/images/tag.png" />
+               </image>
+            </ImageView>
+         </graphic>
+         <tooltip>
+            <Tooltip text="Ctrl + F" />
+         </tooltip></Button>
+      <Button fx:id="transferMoneyButton" layoutX="335.0" layoutY="263.0" mnemonicParsing="false" onAction="#transferMoney" prefHeight="34.0" prefWidth="195.0" text="Transfer Money">
+         <styleClass>
+            <String fx:value="positiveButton" />
+            <String fx:value="small-text" />
+         </styleClass>
+         <tooltip>
+            <Tooltip text="Ctrl + D" />
+         </tooltip></Button>
+      <HBox fx:id="buttonsHBox" layoutX="160.0" layoutY="311.0" prefHeight="25.0" prefWidth="374.0">
+         <children>
+            <Button fx:id="allExpenses" mnemonicParsing="false" onAction="#showAllExpenses" prefHeight="25.0" prefWidth="124.66" styleClass="positiveButton" text="All" />
+            <Button fx:id="fromButton" mnemonicParsing="false" onAction="#fromFilter" prefHeight="25.0" prefWidth="124.66" styleClass="positiveButton" text="From..." />
+            <Button fx:id="inButton" mnemonicParsing="false" onAction="#includingFilter" prefHeight="25.0" prefWidth="124.66" styleClass="positiveButton" text="Including..." />
+         </children></HBox>
+      <VBox layoutX="160.0" layoutY="343.0" prefHeight="200.0" prefWidth="374.0">
+         <children>
+            <ListView fx:id="expensesLogListView" prefHeight="200.0" prefWidth="200.0" styleClass="small-text" />
+         </children>
+      </VBox>
+        <Label fx:id="errorInvalidParticipant" layoutX="160.0" layoutY="246.0" prefHeight="18.0" prefWidth="212.0" />
+      <ComboBox fx:id="languageIndicator" layoutX="605.0" layoutY="18.0" prefHeight="25.0" prefWidth="70.0" />
+      <Button fx:id="showStatisticsButton" layoutX="160.0" layoutY="554.0" mnemonicParsing="false" onAction="#switchToStatistics" prefHeight="34.0" prefWidth="374.0" text="Show statistics">
+         <styleClass>
+            <String fx:value="positiveButton" />
+            <String fx:value="small-text" />
+         </styleClass>
+         <graphic>
+            <ImageView fitHeight="19.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@/images/showStatistics.png" />
+               </image>
+            </ImageView>
+         </graphic>
+         <tooltip>
+            <Tooltip text="Ctrl + S" />
+         </tooltip></Button>
+      <Button fx:id="testEmailButton" layoutX="160.0" layoutY="605.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="157.0" text="Test Email">
+         <styleClass>
+            <String fx:value="positiveButton" />
+            <String fx:value="small-text" />
+            <String fx:value="disabledButton" />
+         </styleClass>
+         <graphic>
+            <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@/images/testEmail.png" />
+               </image>
+            </ImageView>
+         </graphic>
+         <tooltip>
+            <Tooltip text="Ctrl + T" />
+         </tooltip>
+      </Button>
+      <Label fx:id="emailFeedbackLabel" layoutX="160.0" layoutY="646.0" styleClass="small-text" text="Email Feedback" />
+      <Button fx:id="emailInviteButton" layoutX="350.0" layoutY="605.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="187.0" text="Invite By Email">
+         <styleClass>
+            <String fx:value="positiveButton" />
+            <String fx:value="small-text" />
+            <String fx:value="disabledButton" />
+         </styleClass>
+         <graphic>
+            <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@/images/emailInvite.png" />
+               </image>
+            </ImageView>
+         </graphic>
+         <tooltip>
+            <Tooltip text="Ctrl + I" />
+         </tooltip>
+      </Button>
+      <Button fx:id="goBackButton" layoutX="160.0" layoutY="675.0" mnemonicParsing="false" onAction="#switchToMainScreen" prefHeight="35.0" prefWidth="36.0" styleClass="positiveButton">
+         <tooltip>
+            <Tooltip text="Ctrl + B" />
+         </tooltip></Button>
+      <Button fx:id="settleDebtsButton" layoutX="350.0" layoutY="673.0" mnemonicParsing="false" onAction="#settleDebts" prefHeight="35.0" prefWidth="187.0" text="Settle Debts">
+         <styleClass>
+            <String fx:value="positiveButton" />
+            <String fx:value="small-text" />
+         </styleClass>
+         <graphic>
+            <ImageView fitHeight="21.0" fitWidth="21.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@/images/settleDebts.png" />
+               </image>
+            </ImageView>
+         </graphic>
+         <tooltip>
+            <Tooltip text="Ctrl + G" />
+         </tooltip></Button>
+   </children>
+</AnchorPane>

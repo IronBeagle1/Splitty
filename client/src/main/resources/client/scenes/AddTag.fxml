@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="342.0" prefWidth="456.0" stylesheets="@../../stylesheets/main.css, @/stylesheets/main.css" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="client.scenes.AddTagCtrl">
+   <children>
+      <Label fx:id="createTagLabel" contentDisplay="CENTER" layoutX="14.0" layoutY="5.0" prefHeight="35.0" prefWidth="428.0" styleClass="h1" text="Label" textAlignment="CENTER">
+         <font>
+            <Font size="18.0" />
+         </font></Label>
+      <TextField fx:id="tagNameTextField" layoutX="123.0" layoutY="47.0" prefHeight="25.0" prefWidth="213.0" />
+      <Label fx:id="tagNameLabel" layoutX="14.0" layoutY="44.0" prefHeight="32.0" prefWidth="102.0" styleClass="h2" text="Label">
+         <font>
+            <Font size="13.0" />
+         </font></Label>
+      <Label fx:id="errorMessageTagName" layoutX="123.0" layoutY="76.0" prefHeight="17.0" prefWidth="213.0" styleClass="errorText" />
+      <Label fx:id="colorCodeLabel" layoutX="14.0" layoutY="102.0" prefHeight="32.0" prefWidth="102.0" styleClass="h2" text="Label">
+         <font>
+            <Font size="13.0" />
+         </font></Label>
+      <ColorPicker fx:id="colorPicker" layoutX="123.0" layoutY="106.0" />
+      <Button fx:id="cancelButton" layoutX="14.0" layoutY="296.0" mnemonicParsing="false" onAction="#onCancel" prefHeight="32.0" prefWidth="84.0" text="Cancel">
+         <styleClass>
+            <String fx:value="negativeButton" />
+            <String fx:value="small-text" />
+         </styleClass></Button>
+      <Button fx:id="confirmButton" layoutX="361.0" layoutY="296.0" mnemonicParsing="false" onAction="#onConfirm" prefHeight="32.0" prefWidth="84.0" text="Confirm">
+         <styleClass>
+            <String fx:value="positiveButton" />
+            <String fx:value="small-text" />
+         </styleClass></Button>
+   </children>
+</AnchorPane>

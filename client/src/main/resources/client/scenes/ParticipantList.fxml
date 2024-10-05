@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+
+<?import javafx.scene.control.ListView?>
+
+<?import javafx.scene.layout.AnchorPane?>
+
+<?import javafx.scene.layout.VBox?>
+
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.2-ea" stylesheets="@../../stylesheets/main.css, @/stylesheets/main.css" xmlns:fx="http://javafx.com/fxml/1" fx:controller="client.scenes.ParticipantListScreenCtrl">
+    <VBox style="-fx-border-style: none;" layoutX="20" layoutY="20" prefHeight="220" prefWidth="180">
+        <children>
+            <ListView fx:id="participantList" prefHeight="220.0" prefWidth="180.0" styleClass="small-text" />
+        </children>
+    </VBox>
+    <Button fx:id="goBack" layoutX="20" layoutY="260" mnemonicParsing="false" onAction="#goBack" prefHeight="30" prefWidth="30" styleClass="positiveButton" />
+</AnchorPane>

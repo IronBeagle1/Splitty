@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="201.0" prefWidth="364.0" stylesheets="@../../stylesheets/main.css, @/stylesheets/main.css" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="client.scenes.GenerateLanguageTemplateCtrl">
+   <children>
+      <TextField fx:id="nameTextField" layoutX="149.0" layoutY="79.0" />
+      <Label fx:id="header" layoutX="23.0" layoutY="25.0" text="Generate Empty Language Template">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </Label>
+      <Label fx:id="nameLabel" layoutX="43.0" layoutY="82.0" text="Language Name">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Label>
+      <Button fx:id="cancelButton" layoutX="149.0" layoutY="138.0" mnemonicParsing="false" onAction="#cancel" prefHeight="31.0" prefWidth="69.0" styleClass="negativeButton" stylesheets="@../../../../../build/resources/main/stylesheets/main.css" text="Cancel" />
+      <Button fx:id="confirmButton" layoutX="231.0" layoutY="138.0" mnemonicParsing="false" onAction="#confirm" prefHeight="31.0" prefWidth="69.0" styleClass="positiveButton" stylesheets="@../../../../../build/resources/main/stylesheets/main.css" text="Confirm" />
+   </children>
+</AnchorPane>

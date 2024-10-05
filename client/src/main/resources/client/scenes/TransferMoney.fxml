@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" stylesheets="@../../stylesheets/main.css, @/stylesheets/main.css" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="client.scenes.TransferMoneyCtrl">
+   <children>
+      <Label fx:id="header" alignment="CENTER" layoutX="194.0" layoutY="26.0" prefHeight="46.0" prefWidth="212.0" text="Transfer Money">
+         <font>
+            <Font size="23.0" />
+         </font>
+      </Label>
+      <Label fx:id="fromLabel" alignment="CENTER_RIGHT" layoutX="153.0" layoutY="116.0" prefHeight="25.0" prefWidth="51.0" text="From">
+         <font>
+            <Font size="13.0" />
+         </font></Label>
+      <Label fx:id="toLabel" alignment="CENTER_RIGHT" layoutX="153.0" layoutY="168.0" prefHeight="25.0" prefWidth="51.0" text="To">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Label>
+      <TextField fx:id="amountTextField" layoutX="227.0" layoutY="222.0" />
+      <Label fx:id="amountLabel" alignment="CENTER_RIGHT" layoutX="153.0" layoutY="222.0" prefHeight="25.0" prefWidth="51.0" text="Amount">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Label>
+      <Button fx:id="cancelButton" layoutX="193.0" layoutY="287.0" mnemonicParsing="false" onAction="#cancel" prefHeight="34.0" prefWidth="101.0" stylesheets="@../../stylesheets/main.css" text="Cancel">
+         <styleClass>
+            <String fx:value="negativeButton" />
+            <String fx:value="small-text" />
+         </styleClass></Button>
+      <Button fx:id="transferButton" layoutX="302.0" layoutY="287.0" mnemonicParsing="false" onAction="#confirm" prefHeight="34.0" prefWidth="101.0" stylesheets="@../../stylesheets/main.css" text="Confirm">
+         <styleClass>
+            <String fx:value="positiveButton" />
+            <String fx:value="small-text" />
+         </styleClass>
+      </Button>
+      <ChoiceBox fx:id="currencyChoiceBox" layoutX="376.0" layoutY="222.0" prefHeight="25.0" prefWidth="57.0" />
+      <Label fx:id="amountError" layoutX="229.0" layoutY="247.0" prefHeight="20.0" prefWidth="355.0" styleClass="errorText" />
+      <ComboBox fx:id="fromComboBox" layoutX="227.0" layoutY="116.0" prefWidth="150.0" />
+      <ComboBox fx:id="toComboBox" layoutX="227.0" layoutY="168.0" prefWidth="150.0" />
+      <Label fx:id="toError" layoutX="228.0" layoutY="193.0" prefHeight="20.0" prefWidth="355.0" styleClass="errorText" />
+      <Label fx:id="fromError" layoutX="226.0" layoutY="141.0" prefHeight="20.0" prefWidth="355.0" styleClass="errorText" />
+   </children>
+</AnchorPane>
